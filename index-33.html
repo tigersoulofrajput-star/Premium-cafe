@@ -1,0 +1,301 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brew & Bloom — Coffee, Cakes & Bakery Café</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#d4a373;--tx:#f6ece0;--mu:#bfa88f;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:#0c0603;color:var(--tx);font-family:Inter,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#120a06;z-index:30}
+#bg,#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+#fx{pointer-events:none}
+#bv{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;display:none;filter:brightness(.78) contrast(1.05);animation:kb 20s ease-in-out infinite alternate;transform-origin:62% 62%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+@media(prefers-reduced-motion:reduce){#bv{animation:none}}
+.shade{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(12,6,3,.18) 0%,rgba(12,6,3,.5) 100%)}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 5%;background:rgba(18,10,6,.6);backdrop-filter:blur(10px)}
+nav b{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;color:var(--g);white-space:nowrap}
+nav div{display:flex;gap:14px;overflow-x:auto;font-size:.85rem;align-items:center}
+nav a,nav button{color:var(--tx);text-decoration:none;white-space:nowrap;background:none;border:0;font:inherit;cursor:pointer}
+nav a:hover{color:var(--g)}
+section{position:relative;z-index:1;padding:90px 5% 40px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:60px}
+.eyebrow{letter-spacing:.3em;font-size:.72rem;color:var(--g);margin-bottom:10px;text-shadow:0 2px 10px #000}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0 0 12px}
+h3{font-size:1.15rem;margin-top:22px;color:var(--tx)}
+h1{font-size:clamp(2.2rem,7vw,4.5rem);text-shadow:0 4px 30px #000;line-height:1.05}
+h2{font-size:2rem;color:var(--g)}
+.hero p{max-width:480px;color:#e5d3bd;text-shadow:0 2px 12px #000}
+.mu{color:var(--mu)}small{color:var(--mu);display:block;font-size:.78rem;line-height:1.35}
+.btn{display:inline-block;background:linear-gradient(135deg,#e6b27d,#b9783f);color:#1a0d05;padding:12px 24px;border-radius:30px;font-weight:600;text-decoration:none;border:0;cursor:pointer;margin:6px 8px 6px 0;font-size:.95rem;font-family:inherit}
+.btn.o{background:rgba(18,10,6,.5);color:var(--tx);border:1px solid var(--g)}
+.btn.s{padding:7px 14px;font-size:.8rem;margin:3px 6px 3px 0}
+.glass{background:rgba(18,10,6,.68);backdrop-filter:blur(10px);border:1px solid rgba(212,163,115,.22);border-radius:18px;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.card{background:rgba(30,18,10,.8);border:1px solid rgba(212,163,115,.18);border-radius:14px;overflow:hidden;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card img,.ph{width:100%;height:150px;object-fit:cover;display:block}
+.ph{display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#3a2112,#6b4226)}
+.ci{padding:12px;display:flex;justify-content:space-between;gap:8px}.ci span{color:var(--g);font-weight:600;white-space:nowrap}
+.tabs{display:flex;gap:8px;margin:0 0 16px;flex-wrap:wrap}
+.tabs button{background:none;color:var(--tx);border:1px solid var(--g);border-radius:20px;padding:6px 16px;cursor:pointer;font-family:inherit}
+.tabs button.on{background:var(--g);color:#1a0d05}
+input,select{width:100%;padding:11px;margin:5px 0;border-radius:10px;border:1px solid #5a3b25;background:#1c1009;color:var(--tx);font:inherit}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.gal{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.gal img,.gal video,.gal .ph{width:100%;height:220px;object-fit:cover;border-radius:14px;display:block;background:#1c1009}
+.gal img{cursor:zoom-in}
+.gal .ph{font-size:1rem;text-align:center;padding:10px;color:var(--mu);flex-direction:column;gap:6px}
+.show{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+@media(max-width:700px){.show{grid-template-columns:1fr}}
+#cupbox{height:340px;position:relative}
+#cup3d{width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+footer{position:relative;z-index:1;text-align:center;padding:30px;color:var(--mu);font-size:.85rem}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;text-decoration:none;box-shadow:0 6px 20px #0008}
+#adm{display:none;position:fixed;inset:0;z-index:50;background:rgba(8,4,2,.95);overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 5% 40px}
+.li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #3a2616;flex-wrap:wrap}
+.li.col{flex-direction:column;align-items:stretch}
+.lt{display:flex;align-items:center;gap:10px}
+.lt img,.lt video,.lt i{width:48px;height:48px;object-fit:cover;border-radius:8px;font-style:normal;background:#3a2112;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.acts{display:flex;flex-wrap:wrap;align-items:center}
+.x{background:#a33;color:#fff;border:0;border-radius:8px;padding:7px 12px;cursor:pointer;font-family:inherit;font-size:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.chip{border:1px solid var(--g);border-radius:20px;padding:4px 6px 4px 14px;font-size:.85rem}
+.cx{background:none;border:0;color:#e57;cursor:pointer;font-size:1.1rem}
+.badge{font-size:.7rem;padding:2px 9px;border-radius:12px;font-weight:600;margin-left:6px}
+.badge.Pending{background:#e6b27d;color:#2a1608}.badge.Confirmed{background:#2e9e5b;color:#fff}.badge.Cancelled{background:#a33;color:#fff}
+.bkc{padding:12px 0;border-bottom:1px solid #3a2616;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#f6ece0;color:#1a0d05;padding:10px 20px;border-radius:24px;z-index:99;opacity:0;transition:opacity .3s;pointer-events:none;font-size:.9rem;max-width:90%;text-align:center}
+#lb{display:none;position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.92);align-items:center;justify-content:center;cursor:zoom-out}
+#lb img{max-width:94%;max-height:92%;border-radius:10px}
+</style></head><body>
+<canvas id="bg"></canvas>
+<video id="bv" muted loop playsinline autoplay preload="auto"></video>
+<div class="shade"></div>
+<canvas id="fx"></canvas>
+<nav><b id="nm">Brew & Bloom</b><div><a href="#home">Home</a><a href="#menu">Menu</a><a href="#interior">Interior</a><a href="#book">Book</a><a href="#contact">Contact</a><button onclick="ad()">Admin</button></div></nav>
+
+<section class="hero" id="home">
+<div class="eyebrow">COFFEE · CAKES · BAKERY</div>
+<h1>Where every cup<br>tells a story.</h1>
+<p>Handcrafted coffee, fresh-baked cakes and pastries, and a space made for slow mornings and long evenings.</p>
+<div><a class="btn" href="#book">Book a Table</a><a class="btn o" href="#menu">View Menu</a><a class="btn o" id="wa1" target="_blank" rel="noopener">WhatsApp Us</a></div>
+</section>
+
+<section id="show"><div class="glass show"><div><h2>Poured. Brewed. Perfected.</h2><p class="mu">Every cup is crafted by hand — from the first grind to the last swirl of latte art. Take a closer look at ours.</p><small>☝ Drag the cup to rotate it</small></div><div id="cupbox"><canvas id="cup3d"></canvas></div></div></section>
+
+<section id="menu"><div class="glass"><h2>Our Menu</h2><div class="tabs" id="tabs"></div><div class="grid" id="mg"></div></div></section>
+
+<section id="interior"><div class="glass"><h2>Café Interior</h2><p class="mu">Step inside — a look at our space, our corners and our vibe.</p><div class="grid gal" id="gl"></div></div></section>
+
+<section id="book"><div class="glass" style="max-width:560px;margin:auto"><h2>Book a Table</h2>
+<form onsubmit="return bk(event)"><input name="n" placeholder="Your name" required><input name="ph" type="tel" placeholder="Phone number" required>
+<div class="row"><input name="d" type="date" required><input name="t" type="time" required></div>
+<input name="g" type="number" min="1" max="30" placeholder="Number of guests" required>
+<input name="note" placeholder="Special request (optional)">
+<button class="btn" style="width:100%;margin:10px 0 0">Reserve Now</button></form><p id="bok" style="color:var(--g)"></p></div></section>
+
+<section id="contact"><div class="glass" style="max-width:560px;margin:auto"><h2>Contact</h2>
+<p>📍 <span id="ad1"></span></p><p>🕒 <span id="hr1"></span></p><p id="phl" style="display:none">📞 <a id="phn" style="color:var(--g)"></a></p><p>💬 WhatsApp: <b id="wn"></b></p>
+<a class="btn" id="wa2" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn o" id="cal" style="display:none">Call Now</a><a class="btn o" id="map" target="_blank" rel="noopener">Open in Maps</a></div></section>
+<footer>© <span id="nm2"></span> · Crafted with coffee ☕</footer>
+<a class="wa" id="wa3" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+<div id="toast"></div>
+<div id="lb" onclick="this.style.display='none'"><img id="lbi" alt=""></div>
+
+<div id="adm"><div style="max-width:780px;margin:auto"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Admin Panel</h2><button class="x" onclick="cl()">Close ✕</button></div><div class="glass" id="ab"></div></div></div>
+
+<script>
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const K='cafe_site_v1',uid=()=>Date.now()*1000+Math.floor(Math.random()*1000);
+const EM={Coffee:'☕',Cakes:'🍰',Bakery:'🥐','Cold Drinks':'🧊'},em=c=>EM[c]||'🍽️';
+function dm0(){return[
+{id:1,n:'Espresso',p:120,c:'Coffee',d:'Rich, bold single shot'},{id:2,n:'Cappuccino',p:160,c:'Coffee',d:'Espresso, steamed milk, silky foam'},
+{id:3,n:'Iced Caramel Latte',p:220,c:'Coffee',d:'Chilled latte with caramel drizzle'},{id:4,n:'Cold Brew',p:200,c:'Coffee',d:'Slow-steeped for 18 hours'},
+{id:5,n:'Butter Croissant',p:140,c:'Bakery',d:'Flaky, golden, baked fresh daily'},{id:6,n:'Choco Muffin',p:130,c:'Bakery',d:'Double chocolate chunk'},
+{id:7,n:'Blueberry Cheesecake',p:240,c:'Cakes',d:'Creamy cheesecake, blueberry compote'},{id:8,n:'Choc-chip Cookies',p:90,c:'Bakery',d:'Crisp edges, soft centre'},
+{id:101,n:'Chocolate Truffle Cake',p:280,c:'Cakes',d:'Dark chocolate, silky ganache'},{id:102,n:'Red Velvet Cake',p:260,c:'Cakes',d:'Cream-cheese frosting'},
+{id:103,n:'Black Forest Cake',p:250,c:'Cakes',d:'Cherries, cream and chocolate shavings'},{id:104,n:'Garlic Bread',p:120,c:'Bakery',d:'Buttery, herby and toasted'},
+{id:105,n:'Iced Americano',p:170,c:'Cold Drinks',d:'Bold espresso over ice'},{id:106,n:'Mango Smoothie',p:190,c:'Cold Drinks',d:'Fresh mango, chilled and blended'}]}
+function def(){return{name:'Brew & Bloom',wa:'919999999999',ph:'',addr:'12 Coffee Street, Your City',hrs:'8 AM – 11 PM, every day',pw:'1234',cats:['Coffee','Cakes','Bakery','Cold Drinks'],menu:dm0(),gal:[],bk:[]}}
+let S;try{S=JSON.parse(localStorage.getItem(K))}catch(e){}S=S||def();
+(function norm(){if(!S.cats){S.cats=['Coffee','Cakes','Bakery','Cold Drinks'];const have=new Set(S.menu.map(i=>i.n));dm0().filter(i=>i.id>=100&&!have.has(i.n)).forEach(i=>S.menu.push(i))}
+S.menu.forEach(i=>{if(!S.cats.includes(i.c))S.cats.push(i.c)});S.ph=S.ph||'';S.gal=(S.gal||[]).map(g=>g.t?g:{...g,t:'img'});
+S.bk=(S.bk||[]).map((b,i)=>b.id?b:{...b,id:uid()+i,st:'Pending'});S.bk.forEach(b=>{if(!b.st)b.st='Pending'})})();
+function sv(){try{localStorage.setItem(K,JSON.stringify(S));return 1}catch(e){toast('Storage full — try fewer or smaller items');return 0}}
+let tt;function toast(m){const t=$('toast');t.textContent=m;t.style.opacity=1;clearTimeout(tt);tt=setTimeout(()=>t.style.opacity=0,2800)}
+function cf(b,fn,a){if(b.dataset.s){delete b.dataset.s;window[fn](a);return}b.dataset.s=1;const o=b.textContent;b.textContent='Sure?';setTimeout(()=>{if(b.isConnected&&b.dataset.s){delete b.dataset.s;b.textContent=o}},3000)}
+
+/* ---------- MEDIA (photos & videos kept as Blobs in IndexedDB, so no 5 MB limit) ---------- */
+const IM={};
+const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open('cafe_media',1);r.onupgradeneeded=()=>r.result.createObjectStore('f');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
+async function vput(k,b){const d=await idb();return new Promise((res,rej)=>{const t=d.transaction('f','readwrite');t.objectStore('f').put(b,k);t.oncomplete=res;t.onerror=()=>rej(t.error)})}
+async function vdel(k){try{const d=await idb();await new Promise(res=>{const t=d.transaction('f','readwrite');t.objectStore('f').delete(k);t.oncomplete=res;t.onerror=res})}catch(e){}if(IM[k]){URL.revokeObjectURL(IM[k]);delete IM[k]}}
+async function loadMedia(){try{const d=await idb();await new Promise(res=>{const q=d.transaction('f').objectStore('f').openCursor();q.onsuccess=()=>{const c=q.result;if(c){if(c.value instanceof Blob)IM[c.key]=URL.createObjectURL(c.value);c.continue()}else res()};q.onerror=res})}catch(e){}}
+function rzb(file,max){return new Promise((r,j)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),v=document.createElement('canvas');v.width=Math.round(im.width*k);v.height=Math.round(im.height*k);v.getContext('2d').drawImage(im,0,0,v.width,v.height);URL.revokeObjectURL(u);v.toBlob(b=>b?r(b):j(),'image/jpeg',.82)};im.onerror=j;im.src=u})}
+const b2d=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(b)});
+async function store(file,max){const v=file.type.startsWith('video');const k=(v?'v_':'i_')+uid();let b=file;if(!v){try{b=await rzb(file,max)}catch(e){return null}}
+try{await vput(k,b);IM[k]=URL.createObjectURL(b);return{k}}catch(e){return v?null:{img:await b2d(b)}}}
+const src=x=>x.k?IM[x.k]||'':x.img||'';
+
+/* ---------- PUBLIC SITE RENDER ---------- */
+let F='All',A=0,AT='menu',EI=0,BF='All';
+function rm(){if(F!='All'&&!S.cats.includes(F))F='All';
+$('tabs').innerHTML=['All',...S.cats].map(t=>`<button class="${t==F?'on':''}" data-c="${esc(t)}">${esc(t)}</button>`).join('');
+$('mg').innerHTML=S.menu.filter(i=>F=='All'||i.c==F).map(i=>{const s=src(i);return `<div class="card">${s?`<img src="${s}" alt="${esc(i.n)}" loading="lazy">`:`<div class="ph">${em(i.c)}</div>`}<div class="ci"><div><b>${esc(i.n)}</b>${i.d?`<small>${esc(i.d)}</small>`:''}</div><span>₹${esc(i.p)}</span></div></div>`}).join('')||'<p>No items yet.</p>'}
+function rg(){$('gl').innerHTML=S.gal.length?S.gal.map(x=>x.t=='vid'?`<video src="${x.u||src(x)}#t=0.1" controls muted loop playsinline preload="metadata"></video>`:`<img src="${src(x)}" alt="Café interior" loading="lazy">`).join(''):['🛋️','🪴','💡'].map(e=>`<div class="ph"><span style="font-size:2.6rem">${e}</span>Interior photos &amp; videos appear here<br>(upload from Admin → Interior)</div>`).join('')}
+function ra(){const d=S.wa.replace(/\D/g,''),w='https://wa.me/'+d;['wa1','wa2','wa3'].forEach(i=>$(i).href=w);
+$('nm').textContent=$('nm2').textContent=S.name;$('wn').textContent='+'+d;$('ad1').textContent=S.addr;$('hr1').textContent=S.hrs;document.title=S.name+' — Coffee, Cakes & Bakery Café';
+const p=(S.ph||'').trim();$('phl').style.display=$('cal').style.display=p?'':'none';if(p){$('phn').textContent=p;$('phn').href=$('cal').href='tel:'+p.replace(/[^\d+]/g,'')}
+$('map').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(S.addr)}
+$('tabs').onclick=e=>{const b=e.target.closest('button');if(b){F=b.dataset.c;rm()}};
+$('gl').onclick=e=>{if(e.target.tagName=='IMG'){$('lbi').src=e.target.src;$('lb').style.display='flex'}};
+const wn=p=>{const d=String(p).replace(/\D/g,'');return d.length==10?'91'+d:d.length==11&&d[0]=='0'?'91'+d.slice(1):d};
+function bk(e){e.preventDefault();const f=e.target.elements,b={id:uid(),n:f.n.value.trim(),ph:f.ph.value.trim(),d:f.d.value,t:f.t.value,g:f.g.value,note:f.note.value.trim(),st:'Pending'};S.bk.unshift(b);sv();
+const m=`Hello ${S.name}! I'd like to reserve a table.\nName: ${b.n}\nPhone: ${b.ph}\nDate: ${b.d}\nTime: ${b.t}\nGuests: ${b.g}`+(b.note?`\nNote: ${b.note}`:'');
+$('bok').innerHTML=`✅ Request received (ID #${String(b.id).slice(-5)}). <a style="color:#25d366" target="_blank" rel="noopener" href="https://wa.me/${S.wa.replace(/\D/g,'')}?text=${encodeURIComponent(m)}">Confirm on WhatsApp →</a>`;e.target.reset();e.target.elements.d.min=today();return false}
+const today=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+document.querySelector('#book input[name=d]').min=today();
+
+/* ---------- ADMIN ---------- */
+function ad(){$('adm').style.display='block';ar()}
+function cl(){$('adm').style.display='none'}
+function lg(){if($('pw').value===S.pw){A=1;ar()}else toast('Wrong password')}
+function ar(){const b=$('ab');
+if(!A){b.innerHTML='<h3>Admin Login</h3><input id="pw" type="password" placeholder="Admin password" onkeydown="if(event.key==\'Enter\')lg()"><button class="btn" onclick="lg()">Login</button>'+(S.pw==='1234'?'<p class="mu">Default password: 1234 — change it in Settings after logging in.</p>':'');return}
+const P=S.bk.filter(x=>x.st=='Pending').length;
+const T=[['menu','Menu'],['gal','Interior'],['bk','Bookings'+(P?` (${P})`:'')],['vid','Background'],['set','Settings']];
+let h='<div class="tabs">'+T.map(t=>`<button class="${AT==t[0]?'on':''}" onclick="AT='${t[0]}';ar()">${t[1]}</button>`).join('')+'<button onclick="A=0;ar()">Logout</button></div>';
+if(AT=='menu'){h+=`<h3>Add menu item</h3><input id="mn" placeholder="Item name"><div class="row"><input id="mp" type="number" placeholder="Price ₹"><select id="mc">${S.cats.map(c=>`<option>${esc(c)}</option>`).join('')}</select></div><input id="md" placeholder="Short description (optional)"><small>Photo (optional)</small><input id="mf" type="file" accept="image/*"><button class="btn" onclick="am()">Add item</button>
+<h3>Categories</h3><div class="chips">${S.cats.map(c=>`<span class="chip">${esc(c)} <button class="cx" data-c="${esc(c)}" title="Remove (only if empty)">×</button></span>`).join('')}</div><div class="row"><input id="nc" placeholder="New category (e.g. Snacks)"><button class="btn" onclick="ac()">Add category</button></div>
+<h3>Current items (${S.menu.length})</h3>`+S.menu.map(i=>{const s=src(i);
+if(EI==i.id)return `<div class="li col"><input id="en" value="${esc(i.n)}"><div class="row"><input id="ep" type="number" value="${esc(i.p)}"><select id="ec">${S.cats.map(c=>`<option ${c==i.c?'selected':''}>${esc(c)}</option>`).join('')}</select></div><input id="ed" value="${esc(i.d||'')}" placeholder="Description"><small>Replace photo (optional)</small><input id="ef" type="file" accept="image/*"><div><button class="btn s" onclick="es(${i.id})">Save</button><button class="btn s o" onclick="EI=0;ar()">Cancel</button></div></div>`;
+return `<div class="li"><span class="lt">${s?`<img src="${s}">`:`<i>${em(i.c)}</i>`}<span><b>${esc(i.n)}</b><small>${esc(i.c)} · ₹${esc(i.p)}</small></span></span><span class="acts"><button class="btn s o" onclick="EI=${i.id};ar()">Edit</button><button class="x" onclick="cf(this,'dm',${i.id})">Delete</button></span></div>`}).join('')}
+if(AT=='gal')h+=`<h3>Add interior photos / videos</h3><p class="mu">Pick photos or videos from your gallery (you can select many). They show in the “Café Interior” section.</p><input id="gf" type="file" accept="image/*,video/*" multiple><button class="btn" onclick="ag()">Upload</button><h3>Or add a video link</h3><input id="gu" placeholder="https://.../tour.mp4 (direct video file link)"><button class="btn o" onclick="agu()">Add link</button><small>Uploaded files are stored in this browser. To show them to every visitor, host the files and add direct links.</small><h3>Current (${S.gal.length})</h3>`+(S.gal.map(x=>`<div class="li"><span class="lt">${x.t=='vid'?(src(x)||x.u?`<video src="${x.u||src(x)}#t=0.1" muted preload="metadata"></video>`:'<i>🎬</i>'):`<img src="${src(x)}">`}<span>${x.t=='vid'?'Video':'Photo'}</span></span><button class="x" onclick="cf(this,'dg',${x.id})">Delete</button></div>`).join('')||'<p class="mu">Nothing uploaded yet.</p>');
+if(AT=='bk'){const C=s=>S.bk.filter(x=>s=='All'||x.st==s).length;h+='<h3>Table reservations</h3><div class="tabs">'+['All','Pending','Confirmed','Cancelled'].map(s=>`<button class="${BF==s?'on':''}" onclick="BF='${s}';ar()">${s} (${C(s)})</button>`).join('')+'</div>'+
+(S.bk.filter(x=>BF=='All'||x.st==BF).map(x=>`<div class="bkc"><div><b>${esc(x.n)}</b><span class="badge ${x.st}">${x.st}</span><small>📞 ${esc(x.ph)} · 📅 ${esc(x.d)} ${esc(x.t)} · 👥 ${esc(x.g)} guests${x.note?'<br>📝 '+esc(x.note):''}<br>ID #${String(x.id).slice(-5)}</small></div><div class="acts"><button class="btn s" onclick="bs(${x.id},'Confirmed')">Confirm</button><button class="btn s o" onclick="bs(${x.id},'Cancelled')">Cancel</button><a class="btn s o" target="_blank" rel="noopener" href="${wal(x)}">WhatsApp</a><button class="x" onclick="cf(this,'bd',${x.id})">Delete</button></div></div>`).join('')||'<p class="mu">No reservations here.</p>')+'<small style="margin-top:12px">Shows reservations made on this device/browser. Every request also opens a WhatsApp message to your number with the details.</small>'}
+if(AT=='vid')h+=`<h3>Background video</h3><p class="mu">Pick a video from your gallery. It plays muted and looping behind the whole website, replacing the 3D animation. Keep it short (10–30 sec).</p><input id="vf" type="file" accept="video/*"><button class="btn" onclick="av()">Set video</button><h3>Or use a video link (visible to all visitors)</h3><input id="vu" placeholder="https://.../video.mp4" value="${esc(S.vurl||'')}"><button class="btn" onclick="au()">Use link</button><p class="mu">An uploaded video is stored in this browser only. To show it to every visitor, host the file and paste its direct link above.</p><button class="btn o" onclick="dd()">Use default video</button> <button class="x" onclick="dv()">Use 3D animation instead</button>`;
+if(AT=='set')h+=`<h3>Café details</h3>Café name<input id="s1" value="${esc(S.name)}">WhatsApp number (country code + number, digits only)<input id="s2" value="${esc(S.wa)}">Phone number (for calls)<input id="s6" type="tel" value="${esc(S.ph)}" placeholder="e.g. +91 98765 43210">Address<input id="s3" value="${esc(S.addr)}">Opening hours<input id="s4" value="${esc(S.hrs)}"><button class="btn" onclick="ss()">Save details</button><h3>Change password</h3><input id="p1" type="password" placeholder="New password (min 4 characters)"><input id="p2" type="password" placeholder="Confirm new password"><button class="btn" onclick="cp()">Change password</button><small>This password only locks the admin screen on the page. For real security you need a server-side login.</small>`;
+b.innerHTML=h}
+$('ab').onclick=e=>{const b=e.target.closest('.cx');if(b)dc(b.dataset.c)};
+async function am(){const n=$('mn').value.trim(),p=$('mp').value;if(!n||!p)return toast('Enter item name and price');const f=$('mf').files[0],m={id:uid(),n,p,c:$('mc').value,d:$('md').value.trim()};
+if(f){const r=await store(f,800);if(!r)return toast('Could not read that photo');Object.assign(m,r)}S.menu.push(m);if(sv()){rm();ar();toast('Item added ✅')}else S.menu.pop()}
+function ei(id){EI=id;ar()}
+async function es(id){const i=S.menu.find(x=>x.id==id),n=$('en').value.trim(),p=$('ep').value;if(!n||!p)return toast('Name and price are required');const f=$('ef').files[0];
+if(f){const r=await store(f,800);if(!r)return toast('Could not read that photo');if(i.k)vdel(i.k);delete i.k;delete i.img;Object.assign(i,r)}
+Object.assign(i,{n,p,c:$('ec').value,d:$('ed').value.trim()});EI=0;sv();rm();ar();toast('Saved ✅')}
+function dm(id){const i=S.menu.find(x=>x.id==id);if(i&&i.k)vdel(i.k);S.menu=S.menu.filter(x=>x.id!=id);sv();rm();ar();toast('Item removed')}
+function ac(){const c=$('nc').value.trim();if(!c)return;if(S.cats.includes(c))return toast('Category already exists');S.cats.push(c);sv();rm();ar()}
+function dc(c){if(S.menu.some(i=>i.c==c))return toast(`Move or delete the items in “${c}” first`);S.cats=S.cats.filter(x=>x!=c);sv();rm();ar()}
+async function ag(){const fs=[...$('gf').files];if(!fs.length)return toast('Choose photos or videos first');toast('Uploading…');let n=0;
+for(const f of fs){const v=f.type.startsWith('video'),r=await store(f,1400);if(r){S.gal.push({id:uid(),t:v?'vid':'img',...r});n++}}
+sv();rg();ar();toast(n?`${n} uploaded ✅`:'Could not save these files')}
+function agu(){const u=$('gu').value.trim();if(!u)return;S.gal.push({id:uid(),t:'vid',u});sv();rg();ar()}
+function dg(id){const x=S.gal.find(g=>g.id==id);if(x&&x.k)vdel(x.k);S.gal=S.gal.filter(g=>g.id!=id);sv();rg();ar()}
+function bs(id,st){const b=S.bk.find(x=>x.id==id);b.st=st;sv();ar();toast('Marked '+st)}
+function bd(id){S.bk=S.bk.filter(x=>x.id!=id);sv();ar()}
+function wal(b){const m=b.st=='Confirmed'?`Hello ${b.n}, your table at ${S.name} is confirmed for ${b.d} at ${b.t} (${b.g} guests). See you soon! ☕`:b.st=='Cancelled'?`Hello ${b.n}, sorry — we could not confirm your table at ${S.name} for ${b.d} at ${b.t}. Please message us to pick another time.`:`Hello ${b.n}, we received your table request at ${S.name} for ${b.d} at ${b.t}. We'll confirm shortly.`;return `https://wa.me/${wn(b.ph)}?text=${encodeURIComponent(m)}`}
+function ss(){S.name=$('s1').value.trim()||S.name;S.wa=$('s2').value.replace(/\D/g,'')||S.wa;S.ph=$('s6').value.trim();S.addr=$('s3').value;S.hrs=$('s4').value;sv();ra();toast('Saved ✅')}
+function cp(){const a=$('p1').value,b=$('p2').value;if(a.length<4)return toast('Password needs at least 4 characters');if(a!==b)return toast('Passwords do not match');S.pw=a;sv();ar();toast('Password changed ✅')}
+
+/* ---------- BACKGROUND VIDEO ---------- */
+let VID=0;
+async function rv(){const v=$('bv');let s=S.vurl||IM.bgvideo||'';if(!s&&!S.noVid)s='bg.mp4';
+if(s){if(v.getAttribute('src')!==s){v.poster=s=='bg.mp4'?'poster.jpg':'';v.src=s}v.style.display='block';$('bg').style.display='none';VID=1;v.muted=true;v.play().catch(()=>{})}
+else{v.removeAttribute('src');v.load();v.style.display='none';$('bg').style.display='block';VID=0}}
+async function av(){const f=$('vf').files[0];if(!f)return toast('Select a video first');
+try{await vdel('bgvideo');await vput('bgvideo',f);IM.bgvideo=URL.createObjectURL(f);S.vurl='';S.noVid=false;sv();await rv();ar();toast('Background video set ✅')}catch(e){toast('Could not save this video — try a smaller file or use a link')}}
+function au(){S.vurl=$('vu').value.trim();S.noVid=false;sv();rv();ar()}
+async function dv(){S.vurl='';S.noVid=true;sv();await vdel('bgvideo');await rv();ar()}
+async function dd(){S.vurl='';S.noVid=false;sv();await vdel('bgvideo');await rv();ar()}
+
+/* ---------- 2D FALLBACK BACKGROUND: coffee pours on ice cube → melts → cup → steam ---------- */
+const cv=$('bg'),c=cv.getContext('2d');let W,H,D;
+function rs(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D}
+addEventListener('resize',rs);rs();
+const dr=[],sm=[],T0=performance.now(),LP=20,ease=x=>x<0?0:x>1?1:x*x*(3-2*x),R=Math.random;
+const ell=(x,y,a,b)=>{c.beginPath();c.ellipse(x,y,a,b,0,0,7)},poly=a=>{c.beginPath();a.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.closePath()};
+function cup(lv){
+ell(0,100,165,32);let g=c.createLinearGradient(-165,0,165,0);g.addColorStop(0,'#cdbda6');g.addColorStop(.5,'#fbf4e8');g.addColorStop(1,'#bfae96');c.fillStyle=g;c.fill();
+c.lineWidth=15;c.strokeStyle='#efe3d0';c.beginPath();c.arc(104,0,38,-1.5,1.6);c.stroke();
+c.beginPath();c.moveTo(-100,-60);c.lineTo(100,-60);c.bezierCurveTo(100,35,62,92,0,92);c.bezierCurveTo(-62,92,-100,35,-100,-60);
+g=c.createLinearGradient(-100,0,100,0);g.addColorStop(0,'#d9c9b2');g.addColorStop(.4,'#fffaf1');g.addColorStop(1,'#cbb99f');c.fillStyle=g;c.fill();
+ell(0,-60,100,22);c.fillStyle='#f4ebdd';c.fill();ell(0,-58+(1-lv)*14,88,17);g=c.createRadialGradient(-20,-62,2,0,-58,90);g.addColorStop(0,'#9a6238');g.addColorStop(1,'#3a1d0c');c.fillStyle=g;c.fill();
+if(lv>.1){ell(0,-60+(1-lv)*14,50,7);c.fillStyle='rgba(255,220,170,.18)';c.fill()}}
+function frame(now){
+if(VID){requestAnimationFrame(frame);return}
+const t=((now-T0)/1000)%LP,k=1-ease((t-3)/9),g=Math.min(1,t)*Math.min(1,(LP-t)/1.5);
+if(t<.05){dr.length=0;sm.length=0}
+c.setTransform(D,0,0,D,0,0);
+let bg=c.createRadialGradient(W/2,H*.5,40,W/2,H*.5,Math.max(W,H)*.8);bg.addColorStop(0,'#3d2314');bg.addColorStop(1,'#0c0603');c.fillStyle=bg;c.fillRect(0,0,W,H);
+const s=Math.max(.6,Math.min(1.4,Math.min(W,H*1.1)/620)),cx=W/2,cy=H*.46;
+c.save();c.translate(cx,cy);c.scale(s,s);
+bg=c.createRadialGradient(0,20,10,0,20,330);bg.addColorStop(0,`rgba(230,160,90,${.22*g*(1.2-k)})`);bg.addColorStop(1,'rgba(230,160,90,0)');c.fillStyle=bg;c.fillRect(-400,-350,800,800);
+c.globalAlpha=g*(.28+.72*(1-k));cup(1-k);c.globalAlpha=g;
+const h=125*Math.max(k,0),cc=95-1.2*h;let hit=-50;
+if(h>3){const T=[[0,cc-1.2*h],[h,cc-.6*h],[0,cc],[-h,cc-.6*h]],L=[[-h,cc-.6*h],[0,cc],[0,cc+1.2*h],[-h,cc+.6*h]],Rr=[[0,cc],[h,cc-.6*h],[h,cc+.6*h],[0,cc+1.2*h]],q=Math.min(.55,Math.max(0,(t-1)/5));
+[[T,'rgba(225,245,255,.6)'],[L,'rgba(140,200,235,.4)'],[Rr,'rgba(105,170,215,.5)']].forEach(f=>{poly(f[0]);c.fillStyle=f[1];c.fill();poly(f[0]);c.fillStyle=`rgba(80,44,20,${q})`;c.fill();c.strokeStyle='rgba(255,255,255,.75)';c.lineWidth=2;c.stroke()});
+c.strokeStyle='rgba(255,255,255,.5)';c.beginPath();c.moveTo(-h*.7,cc-.5*h);c.lineTo(-h*.7,cc+.4*h);c.stroke();hit=cc-.6*h;
+if(t>2&&t<12){ell(0,cc+1.2*h,h*1.1,h*.22);c.fillStyle='rgba(70,38,16,.5)';c.fill()}}
+const sa=t<1?0:t<2?ease(t-1):t<12?1:ease(13-t),top=-H/2/s-30;
+if(sa>0){const w=(12+3*Math.sin(now/120))*sa;let l=c.createLinearGradient(-w,0,w,0);l.addColorStop(0,'#2e1608');l.addColorStop(.5,'#8a5530');l.addColorStop(1,'#2e1608');c.strokeStyle=l;c.lineWidth=w;c.lineCap='round';c.beginPath();c.moveTo(0,top);c.bezierCurveTo(3,top/2,-3,hit/2,0,hit);c.stroke();
+for(let i=0;i<3;i++)dr.push({x:(R()-.5)*14,y:hit,vx:(R()-.5)*4.5,vy:-R()*4-1.5,l:0})}
+for(let i=dr.length-1;i>=0;i--){const d=dr[i];d.x+=d.vx;d.y+=d.vy;d.vy+=.28;d.l++;if(d.l>34){dr.splice(i,1);continue}ell(d.x,d.y,2.6,2.6);c.fillStyle=`rgba(120,72,38,${1-d.l/34})`;c.fill()}
+if(k<.65&&sm.length<130&&t<LP-3)for(let i=0;i<1+(1-k)*2;i++)sm.push({x:(R()-.5)*120,y:-62,vy:.6+R()*.9,r:10,l:0,p:R()*6});
+for(let i=sm.length-1;i>=0;i--){const p=sm[i];p.y-=p.vy;p.x+=Math.sin(p.l*.035+p.p)*.7;p.r+=.32;p.l++;if(p.l>230){sm.splice(i,1);continue}
+const a=Math.sin(Math.PI*p.l/230)*.2*g,r=c.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);r.addColorStop(0,`rgba(255,248,238,${a})`);r.addColorStop(1,'rgba(255,248,238,0)');c.fillStyle=r;c.fillRect(p.x-p.r,p.y-p.r,p.r*2,p.r*2)}
+c.restore();requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+
+/* ---------- REAL 3D (Three.js): rotating coffee cup + floating beans over the video ---------- */
+function init3D(){if(!window.THREE)return;const T=THREE;
+let cupOk=0,fxOk=0,Rc,Rf,sc,cam,G,steam=[],orb=[],sc2,c2,bg2,beans=[],vis=true,drag=0,lx=0,hh=6.5,hw=10;
+const cvs=$('cup3d'),box=$('cupbox'),fxc=$('fx');
+const beanGeo=new T.SphereGeometry(1,18,14),grooveGeo=new T.SphereGeometry(1,8,6),
+beanMat=new T.MeshStandardMaterial({color:0x4b2a14,roughness:.42,metalness:.12}),grooveMat=new T.MeshStandardMaterial({color:0x1d0d04,roughness:.7});
+function bean(){const g=new T.Group(),b=new T.Mesh(beanGeo,beanMat);b.scale.set(1,.68,.5);const r=new T.Mesh(grooveGeo,grooveMat);r.scale.set(.92,.05,.07);r.position.y=.66;g.add(b,r);return g}
+function tex(){const k=document.createElement('canvas');k.width=k.height=64;const x=k.getContext('2d'),g=x.createRadialGradient(32,32,0,32,32,32);g.addColorStop(0,'rgba(255,255,255,.95)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,64,64);return new T.CanvasTexture(k)}
+const lights=s=>{s.add(new T.AmbientLight(0xfff1e0,.75));const d=new T.DirectionalLight(0xffe2bd,1.15);d.position.set(4,6,5);s.add(d);const p=new T.PointLight(0xd4a373,.9,30);p.position.set(-4,2,-3);s.add(p)};
+try{ /* cup scene */
+Rc=new T.WebGLRenderer({canvas:cvs,antialias:true,alpha:true});Rc.setPixelRatio(Math.min(devicePixelRatio||1,2));
+sc=new T.Scene();cam=new T.PerspectiveCamera(35,1,.1,60);cam.position.set(0,3.6,8.4);cam.lookAt(0,.7,0);lights(sc);
+G=new T.Group();G.rotation.x=.14;sc.add(G);
+const lathe=(pts,m)=>new T.Mesh(new T.LatheGeometry(pts.map(p=>new T.Vector2(p[0],p[1])),72),m);
+const white=new T.MeshStandardMaterial({color:0xf8f1e6,roughness:.22,metalness:.05,side:T.DoubleSide});
+G.add(lathe([[0,.02],[.55,.02],[.62,.06],[.9,.55],[1.05,1.25],[1,1.25],[.88,.62],[.5,.14],[0,.12]],white));
+G.add(lathe([[0,-.06],[1.25,-.06],[1.6,.03],[1.85,.16],[1.8,.18],[1.55,.08],[1.2,0],[0,0]],white));
+const cof=new T.Mesh(new T.CircleGeometry(.96,64),new T.MeshStandardMaterial({color:0x3a1c0c,roughness:.12}));cof.rotation.x=-Math.PI/2;cof.position.y=1.12;G.add(cof);
+[[.78,.88,0xc98c52],[.55,.65,0xe6bd8c],[.3,.42,0xc98c52],[0,.14,0xe6bd8c]].forEach(a=>{const r=new T.Mesh(new T.RingGeometry(a[0],a[1],48),new T.MeshStandardMaterial({color:a[2],roughness:.3,side:T.DoubleSide}));r.rotation.x=-Math.PI/2;r.position.y=1.125;G.add(r)});
+const hd=new T.Mesh(new T.TorusGeometry(.44,.09,16,40,Math.PI*1.3),white);hd.position.set(1.02,.74,0);hd.rotation.z=-Math.PI*.65;G.add(hd);
+const st=tex();for(let i=0;i<30;i++){const s=new T.Sprite(new T.SpriteMaterial({map:st,transparent:true,opacity:0,depthWrite:false}));s.userData={sp:.1+Math.random()*.12,ph:Math.random()};G.add(s);steam.push(s)}
+for(let i=0;i<6;i++){const b=bean(),a=i/6*Math.PI*2;b.scale.setScalar(.2);b.position.set(Math.cos(a)*1.5,.2,Math.sin(a)*1.5);b.rotation.set(Math.random(),Math.random()*6,Math.random());G.add(b)}
+for(let i=0;i<7;i++){const b=bean();b.scale.setScalar(.14+Math.random()*.12);b.userData={a:Math.random()*6.28,r:2.3+Math.random()*.8,y:.8+Math.random()*2.2,sp:.25+Math.random()*.35};orb.push(b);G.add(b)}
+cvs.addEventListener('pointerdown',e=>{drag=1;lx=e.clientX;cvs.style.cursor='grabbing';try{cvs.setPointerCapture(e.pointerId)}catch(_){}});
+cvs.addEventListener('pointermove',e=>{if(drag){G.rotation.y+=(e.clientX-lx)*.01;lx=e.clientX}});
+const up=()=>{drag=0;cvs.style.cursor='grab'};cvs.addEventListener('pointerup',up);cvs.addEventListener('pointercancel',up);
+new ResizeObserver(()=>{const w=box.clientWidth,h=box.clientHeight;if(w&&h){Rc.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}}).observe(box);
+new IntersectionObserver(e=>{vis=e[0].isIntersecting}).observe(box);cupOk=1}catch(e){box.innerHTML='<div class="ph" style="height:100%;border-radius:14px">☕</div>'}
+try{ /* floating beans over video */
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+Rf=new T.WebGLRenderer({canvas:fxc,alpha:true,antialias:false});Rf.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+sc2=new T.Scene();c2=new T.PerspectiveCamera(50,1,.1,100);c2.position.z=14;lights(sc2);bg2=new T.Group();sc2.add(bg2);
+const fit=()=>{Rf.setSize(innerWidth,innerHeight,false);c2.aspect=innerWidth/innerHeight;c2.updateProjectionMatrix();hh=Math.tan(25*Math.PI/180)*14;hw=hh*c2.aspect};fit();addEventListener('resize',fit);
+for(let i=0;i<18;i++){const b=bean(),z=-7+Math.random()*10;b.scale.setScalar(.3+Math.random()*.45);b.position.set((Math.random()*2-1)*hw,(Math.random()*2-1)*hh,z);
+b.userData={rx:(Math.random()-.5)*.012,ry:(Math.random()-.5)*.016,fall:.004+Math.random()*.008,sw:Math.random()*6};b.rotation.set(Math.random()*6,Math.random()*6,Math.random()*6);beans.push(b);bg2.add(b)}fxOk=1}}catch(e){}
+(function tick(t){requestAnimationFrame(tick);if(document.hidden)return;t*=.001;
+if(cupOk&&vis){if(!drag)G.rotation.y+=.005;
+steam.forEach(s=>{const p=(t*s.userData.sp+s.userData.ph)%1;s.position.set(Math.sin(p*7+s.userData.ph*9)*.28,1.25+p*2.3,Math.cos(p*5+s.userData.ph*9)*.2);s.scale.setScalar(.5+p*1.3);s.material.opacity=Math.sin(Math.PI*p)*.3});
+orb.forEach(b=>{const u=b.userData,a=u.a+t*u.sp;b.position.set(Math.cos(a)*u.r,u.y+Math.sin(t+u.a)*.18,Math.sin(a)*u.r);b.rotation.x+=.02;b.rotation.y+=.015});
+Rc.render(sc,cam)}
+if(fxOk){const sy=scrollY*.004;bg2.position.y=sy;beans.forEach(b=>{const u=b.userData;b.rotation.x+=u.rx;b.rotation.y+=u.ry;b.position.y-=u.fall;b.position.x+=Math.sin(t*.4+u.sw)*.003;if(b.position.y+sy<-hh-1)b.position.y=hh+1-sy});Rf.render(sc2,c2)}})(0)}
+function load3(){const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';s.onload=init3D;s.onerror=()=>{$('cupbox').innerHTML='<div class="ph" style="height:100%;border-radius:14px">☕</div>'};document.head.appendChild(s)}
+
+/* ---------- BOOT ---------- */
+rm();rg();ra();rv();
+loadMedia().then(()=>{rm();rg();rv();if(A)ar()});
+load3();
+</script></body></html>
+
+</body></html>
